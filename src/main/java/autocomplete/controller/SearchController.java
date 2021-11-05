@@ -1,5 +1,7 @@
 package autocomplete.controller;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,5 +35,11 @@ public class SearchController {
 		} catch (HttpClientErrorException e) {
 			return new ResponseEntity<>(e.getMessage(), HttpStatus.SERVICE_UNAVAILABLE);
 		}
+	}
+
+	private HttpEntity<String> getEntity() {
+		HttpHeaders headers = new HttpHeaders();
+		headers.set("", "token ");
+		return new HttpEntity<>("body", headers);
 	}
 }
