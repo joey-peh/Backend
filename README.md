@@ -1,6 +1,6 @@
 # SEARCH_Backend
 Preferred Environment: Eclipse  
-Programming Language: Java Spring
+Framework: Java Spring
 	
 	Run MainApplication.java located in src/main/java/autocomplete.
 
